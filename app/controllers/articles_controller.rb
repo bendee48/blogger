@@ -18,7 +18,7 @@ include ArticlesHelper
   def create
     @article = Article.new(article_params)
     @article.save
-    flash.notice = "#{article.title} successfully created!"
+    flash.notice = "#{@article.title} successfully created!"
     redirect_to article_path(@article)
   end
 
